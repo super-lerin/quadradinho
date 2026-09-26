@@ -63,18 +63,21 @@
     font-size: 1.1rem;
   }
 
-  .navbar-brand .logo-mini {
-    width: 36px;
-    height: 36px;
-    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #1a1510;
-    font-weight: 800;
-    font-size: 0.85rem;
-  }
+ .navbar-brand .logo-mini {
+  width: 36px;
+  height: 36px;
+  
+  /* Imagem de fundo ajustada */
+  background-image: url("https://instagram.fsdu8-2.fna.fbcdn.net/v/t51.82787-19/655942905_17888089305452006_5005935828498079114_n.jpg?stp=dst-jpg_s150x150_tt6&_nc_cat=105&ccb=7-5&_nc_sid=f7ccc5&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDAwLkMzIn0%3D&_nc_ohc=a0HRQTkkcPQQ7kNvwEGQ_JR&_nc_oc=AdryhaJvzSkBTvk8rJMN-N8kzR0PX1LPc_2pm2s6SemIkXHd-NDNkourecMQTRjT0wQvhbZpSpJk8du80-CBKGz0&_nc_zt=24&_nc_ht=instagram.fsdu8-2.fna&_nc_gid=DTb0PHpg97R7zU-Z8OC3uQ&_nc_ss=7b6a8&oh=00_AQKgGwPpYYexxSM6whncSwh5tyIDOh1hGWXmx0uwJzVezQ&oe=6ABD9579");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
   .navbar-menu {
     display: flex;
@@ -214,42 +217,44 @@
     max-width: 900px;
   }
 
-  .logo-wrapper {
-    margin-bottom: 2rem;
-    perspective: 800px;
-  }
+ .logo-wrapper {
+  margin-bottom: 2rem;
+  perspective: 800px;
+}
 
-  .logo {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 90px;
-    height: 90px;
-    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
-    border-radius: 18px;
-    font-size: 1.8rem;
-    font-weight: 800;
-    color: #1a1510;
-    letter-spacing: -1px;
-    box-shadow: 
-      0 0 0 4px rgba(201, 168, 76, 0.15),
-      0 20px 60px rgba(201, 168, 76, 0.3),
-      inset 0 2px 0 rgba(255, 255, 255, 0.3);
-    opacity: 0;
-    transform: rotateY(-180deg) scale(0.3);
-    animation: logoReveal 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s forwards;
-    position: relative;
-  }
+.logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 90px;
+  height: 90px;
 
-  .logo::after {
-    content: '';
-    position: absolute;
-    inset: -8px;
-    border: 2px solid var(--gold);
-    border-radius: 24px;
-    opacity: 0.3;
-    animation: logoRing 2s ease-out 1.5s forwards;
-  }
+  /* Alterações para carregar a imagem */
+  background-image: url("https://instagram.fsdu8-2.fna.fbcdn.net/v/t51.82787-19/655942905_17888089305452006_5005935828498079114_n.jpg?stp=dst-jpg_s150x150_tt6&_nc_cat=105&ccb=7-5&_nc_sid=f7ccc5&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDAwLkMzIn0%3D&_nc_ohc=a0HRQTkkcPQQ7kNvwEGQ_JR&_nc_oc=AdryhaJvzSkBTvk8rJMN-N8kzR0PX1LPc_2pm2s6SemIkXHd-NDNkourecMQTRjT0wQvhbZpSpJk8du80-CBKGz0&_nc_zt=24&_nc_ht=instagram.fsdu8-2.fna&_nc_gid=DTb0PHpg97R7zU-Z8OC3uQ&_nc_ss=7b6a8&oh=00_AQKgGwPpYYexxSM6whncSwh5tyIDOh1hGWXmx0uwJzVezQ&oe=6ABD9579");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border-radius: 18px;
+  box-shadow: 
+    0 0 0 4px rgba(201, 168, 76, 0.15),
+    0 20px 60px rgba(201, 168, 76, 0.3),
+    inset 0 2px 0 rgba(255, 255, 255, 0.3);
+  opacity: 0;
+  transform: rotateY(-180deg) scale(0.3);
+  animation: logoReveal 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s forwards;
+  position: relative;
+}
+
+.logo::after {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border: 2px solid var(--gold);
+  border-radius: 24px;
+  opacity: 0.3;
+  animation: logoRing 2s ease-out 1.5s forwards;
+}
 
   @keyframes logoReveal {
     0%   { opacity: 0; transform: rotateY(-180deg) scale(0.3); }
@@ -957,7 +962,7 @@
      ============================================ -->
 <nav class="navbar">
   <a href="#inicio" class="navbar-brand">
-    <div class="logo-mini">Q58</div>
+    <div class="logo-mini"></div>
     <span>Quadradinho 58</span>
   </a>
   <ul class="navbar-menu">
@@ -980,7 +985,7 @@
 
   <div class="hero-content">
     <div class="logo-wrapper">
-      <div class="logo">Q58</div>
+      <div class="logo"></div>
     </div>
 
     <h1 class="title">
